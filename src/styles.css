@@ -1,0 +1,48 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.spinner-container {
+  text-align: center;
+  width: 200px;
+  transition: 1s ease-in-out;
+  word-wrap: break-word;
+}
+
+.spinner-element {
+  height: 100px;
+  max-width: 200px;
+  font-size: 2em;
+}
+
+.spinner-machine {
+  height: 100px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+#spin-button {
+  display: block;
+  margin: auto;
+  display: block;
+  position: relative;
+  top: 20px;
+}
+
+h3 {
+  max-width: 200px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.heading-container {
+  width: 600px;
+}
+
+.row {
+  margin: auto;
+}
