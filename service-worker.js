@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/React.js-Overtime-Randomizer/precache-manifest.286342d13b1ee1cf45c937c5f5d76348.js"
+  "/React.js-Overtime-Randomizer/precache-manifest.1d8367868620a166a5894b657eaa08a8.js"
 );
 
 self.addEventListener('message', (event) => {
