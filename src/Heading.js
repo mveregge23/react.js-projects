@@ -1,5 +1,7 @@
 import React from "react";
 
+/* Heading is a component to display the name of the app
+   and the headers for the fields being randomized */
 function Heading() {
   return (
     <>

@@ -4,17 +4,19 @@ import Spinner from "./Spinner.js";
 import bootstrap from "bootstrap"; // eslint-disable-line no-unused-vars
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-//add items to these arrays
+// add items to these arrays to change language
 let mechanism = [
   "Tiered",
   "Dynamic",
   "Differential",
   "Weighted",
-  "Location-Based"
+  "Location-Based",
 ];
 let denomination = ["Daily", "Weekly", "Biweekly", "Monthly", "Yearly"];
 let threshold = ["Hours", "Shifts", "Steps", "Breaths"];
 
+/* SpinnerMachine is the parent component of the Spinners, and triggers
+   them to spin when the user clicks the SpinButton */
 class SpinnerMachine extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +26,8 @@ class SpinnerMachine extends React.Component {
     this.tSpinner = React.createRef();
   }
 
-  handleClick = event => {
+  // handleClick delegates the spinning logic to the Spinners
+  handleClick = (event) => {
     event.preventDefault();
     this.mSpinner.current.spin();
     this.dSpinner.current.spin();
@@ -35,9 +38,9 @@ class SpinnerMachine extends React.Component {
     return (
       <>
         <div className="spinner-machine">
-          <Spinner elements={mechanism} timer={2000} ref={this.mSpinner} />
-          <Spinner elements={denomination} timer={3000} ref={this.dSpinner} />
-          <Spinner elements={threshold} timer={4000} ref={this.tSpinner} />
+          <Spinner elements={mechanism} ref={this.mSpinner} />
+          <Spinner elements={denomination} ref={this.dSpinner} />
+          <Spinner elements={threshold} ref={this.tSpinner} />
         </div>
         <SpinButton clickHandler={this.handleClick}>Spin the wheel!</SpinButton>
       </>
